@@ -1,4 +1,4 @@
-import { BrowserRouter } from "react-router-dom"
+// Router is provided at the app root; no local BrowserRouter here
 import { Container } from "./styles"
 import ScrollAnimation from "react-animate-on-scroll"
 import Illustration from "../../assets/illustration.svg"
@@ -12,24 +12,22 @@ export function Hero() {
   return (
     <Container id="home">
       <div className="hero-text">
-        <ScrollAnimation animateIn="fadeInUp">
+        <ScrollAnimation animateIn="fadeInUp" initiallyVisible={true}>
           <p>Hello <img src={Hello} alt="Hello" width="20px"/>, I'm</p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000} initiallyVisible={true}>
           <h1>Atul Kumar</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000} initiallyVisible={true}>
           <h3>Frontend Developer</h3>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000} initiallyVisible={true}>
           <p className="small-resume">6 Months Experience</p>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-          <BrowserRouter>
-            <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
-          </BrowserRouter>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000} initiallyVisible={true}>
+          <NavHashLink smooth to="#contact" className="button">Contact</NavHashLink>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
+  <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000} initiallyVisible={true}>
       <div className="social-media"><a
         href="https://www.linkedin.com/in/atul-kumar-387079234/"
         target="_blank"

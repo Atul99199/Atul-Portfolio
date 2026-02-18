@@ -1,5 +1,4 @@
 import { Container } from './styles'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 import Resume from '../../assets/Atul-Resume.pdf'
@@ -14,11 +13,10 @@ export function Header() {
   }
   return (
     <Container className="header-fixed">
-      <Router>
-        <HashLink smooth to="#home" className="logo">
-          <span>{"<Atul "}</span>
-          <span>{" Kumar/>"}</span>
-        </HashLink>
+      <HashLink smooth to="#home" className="logo">
+        <span>{"<Atul "}</span>
+        <span>{" Kumar/>"}</span>
+      </HashLink>
         <input
           onChange={toggleTheme}
           className="container_toggle"
@@ -43,8 +41,8 @@ export function Header() {
           <a href={Resume} download className="button">
             Resume
           </a>
-        </nav>
-        <div
+  </nav>
+  <div
           aria-expanded={isActive ? 'true' : 'false'}
           aria-haspopup="true"
           aria-label={isActive ? 'Fechar menu' : 'Abrir menu'}
@@ -53,7 +51,6 @@ export function Header() {
             setActive(!isActive)
           }}
         ></div>
-      </Router>
     </Container>
   )
 }
