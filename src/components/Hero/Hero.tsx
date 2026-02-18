@@ -1,6 +1,6 @@
 // Router is provided at the app root; no local BrowserRouter here
 import { Container } from "./styles"
-import ScrollAnimation from "react-animate-on-scroll"
+import ScrollAnimation from "../ScrollAnimation"
 import Illustration from "../../assets/illustration.svg"
 import { NavHashLink } from "react-router-hash-link"
 import linkedin from '../../assets/linkedin.svg'
